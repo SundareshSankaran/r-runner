@@ -5,7 +5,7 @@ And, yes! You guessed the inspiration behind the name correctly! :)
 
 ![R-Runner, beep beep!](/img/road-runner.jpg)
 
-**Analytics developers appreciate unified interaction with SAS and R, especially in certain industries such as Pharma and Healthcare, which have significant R developers.  R-Runner helps such developers create solutions using R (as well as SAS and Python if required) within SAS Studio on SAS Viya.**
+**Analytics developers appreciate unified interaction with SAS and R, especially in certain industries such as Pharma and Healthcare, which have significant R developers.  R Runner helps such developers create solutions using R (as well as SAS and Python if required) within SAS Studio on SAS Viya.**
 
 R Runner enables you to submit R scripts from within SAS Studio and develop integrated analytics pipelines. You can submit either:
 
@@ -14,6 +14,8 @@ R Runner enables you to submit R scripts from within SAS Studio and develop inte
 2. R scripts (programs) through a file selector
 
 Variables created within the R script (also known as R environment variables) can also be written to an output SAS dataset for reference and reuse in downstream code.
+
+In this early version, you'll also be able to attach an input table (SAS dataset) to the custom step, which will be converted to an R data frame (via Python) for analysis in the R script.
 
 ### <mark> An important note for this early version </mark>
 This is the first release of R Runner and facilitates the basic task of executing R scripts within SAS Studio.  We'll consider additional improvements in future.
@@ -55,13 +57,15 @@ This custom step accesses an R interpreter through a Python package (rpy2).  The
 
 ### Input parameters:
 
-1. Input R Script (file selector, optional):  attach an R script which you wish to execute.
+1. Input Data (input port, optional): attach an input table (SAS dataset) to this port to facilitate analysis in R.  You should refer this input dataset as r_input_table inside the R script. 
 
-2. R Snippet (text area, optional): use this for short (less than 32768 characters) snippets of R code you wish to execute.
+2. Input R Script (file selector, optional):  attach an R script which you wish to execute.
+
+3. R Snippet (text area, optional): use this for short (less than 32768 characters) snippets of R code you wish to execute.
 
 Ensure your R script is styled and  indented as per R conventions to avoid failures.
 
-3. R_HOME path (Configuration tab, verify/change defaults): rpy2  needs to know where to find R on the system.  Change this default value after consulting your administrator.  The default is based on an environment where R and Python are installed using the SAS Configurator for Open Source (also known as sas-pyconfig) and sas-open-source-config utilities.
+4. R_HOME path (Configuration tab, verify/change defaults): rpy2  needs to know where to find R on the system.  Change this default value after consulting your administrator.  The default is based on an environment where R and Python are installed using the SAS Configurator for Open Source (also known as sas-pyconfig) and sas-open-source-config utilities.
 
 
 ### Output specifications:
