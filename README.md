@@ -1,11 +1,11 @@
 # R Runner
 SAS Studio needs a quick and easy interface to R. This repository provides a custom step (a low-code component) which will enable developers to quickly submit R scripts from within SAS Studio (on SAS Viya) in a quick and no-nonsense manner.
 
-And, yes! You guessed the inspiration behind the name correctly! :)
-
-![R-Runner, beep beep!](/img/road-runner.jpg)
-
 **Analytics developers appreciate unified interaction with SAS and R, especially in certain industries such as Pharma and Healthcare, which have significant R developers.  R Runner helps such developers create solutions using R (as well as SAS and Python if required) within SAS Studio on SAS Viya.**
+
+## A general idea (click on image below to watch video)
+
+[![Beep Beep](/img/r_runner_snapshot.png)](https://youtu.be/7MQmdFMOcBo)
 
 R Runner enables you to submit R scripts from within SAS Studio and develop integrated analytics pipelines. You can submit either:
 
@@ -28,11 +28,6 @@ To set correct expectations,
 
 - While this may seem obvious, do not expect syntax checks, highlighting or other convenience you are used to with R interfaces.
 
-
-
-## A general idea (click on image below to watch video)
-
-[![Beep Beep](/img/r_runner_snapshot.png)](https://youtu.be/7MQmdFMOcBo)
 
 ## SAS Viya Version Support
 Tested in Viya 4, Stable 2023.08
@@ -111,5 +106,3 @@ This is not a comprehensive list of all known issues with rpy2. However, it's li
 Version 1.0 (18AUG2023) 
 * Initial Step Creation
 
-
-(Wile E Coyote and the Road Runner are creations of Warner Bros. and used only as a popular culture reference.)
