@@ -32,7 +32,7 @@ To set correct expectations,
 
 ## A general idea
 
-[![Beep Beep](https://youtu.be/7MQmdFMOcBo)](/img/r_runner_snapshot.png)
+[![Beep Beep](https://youtu.be/7MQmdFMOcBo)]
 
 ## SAS Viya Version Support
 Tested in Viya 4, Stable 2023.08
