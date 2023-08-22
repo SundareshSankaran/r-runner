@@ -30,7 +30,7 @@ To set correct expectations,
 
 
 
-## A general idea
+## A general idea (click on image below to watch video)
 
 [![Beep Beep](/img/r_runner_snapshot.png)](https://youtu.be/7MQmdFMOcBo)
 
