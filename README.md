@@ -65,7 +65,11 @@ This custom step accesses an R interpreter through a Python package (rpy2).  The
 
 Ensure your R script is styled and  indented as per R conventions to avoid failures.
 
-4. R_HOME path (Configuration tab, verify/change defaults): rpy2  needs to know where to find R on the system.  Change this default value after consulting your administrator.  The default is based on an environment where R and Python are installed using the SAS Configurator for Open Source (also known as sas-pyconfig) and sas-open-source-config utilities.
+4. R dataframe to output (text field, optional): refer an R dataframe (which exists in the R session) which you desire to output to a SAS dataset for downstream analysis.
+
+5. Output table (output port, optional): attach a SAS dataset to this port which will contain data from a R dataframe you wish to output.
+
+6. R_HOME path (Configuration tab, verify/change defaults): rpy2  needs to know where to find R on the system.  Change this default value after consulting your administrator.  The default is based on an environment where R and Python are installed using the SAS Configurator for Open Source (also known as sas-pyconfig) and sas-open-source-config utilities.
 
 
 ### Output specifications:
@@ -93,7 +97,19 @@ Ensure your R script is styled and  indented as per R conventions to avoid failu
 - Sundaresh Sankaran (sundaresh.sankaran@sas.com)
 
 
+## Some known issues & behavior:
+
+This is not a comprehensive list of all known issues with rpy2. However, it's likely you may encounter some of these (given that you are working with THREE languages !) issues and the following links may be helpful.
+
+1. Pandas may not transfer cleanly to R dataframe due to a mismatch in types: https://stackoverflow.com/questions/60197294/error-when-using-pandas-dataframe-in-r-cell-in-rpy2-jupyter-notebook
+
+2. A table may be created but you are not able to access / export it.  This might be due to global envs vs. local sessions: https://stackoverflow.com/questions/15227926/rpy2-object-not-found-error
+
+
 ## Change Log
 
 Version 1.0 (18AUG2023) 
 * Initial Step Creation
+
+
+(Wile E Coyote and the Road Runner are creations of Warner Bros. and used only as a popular culture reference.)
